@@ -1,19 +1,46 @@
 
 package logica;
 
+import java.util.Scanner;
+
 public class Mamifero extends Animal implements Cuidable{
     private boolean tienePelo;
-    private double tamanioRelativo;
+    private String tamanioRelativo;
     
     public Mamifero(){}
     
-    public Mamifero(String nombre, int edad, double peso, boolean esPeligroso, boolean hambriento, boolean tienePelo, double tamanioRelativo){
+    public Mamifero(String nombre, int edad, double peso, boolean esPeligroso, boolean hambriento, boolean tienePelo, String tamanioRelativo){
         super(nombre, edad, peso, esPeligroso, hambriento);
         this.tienePelo = tienePelo;
         this.tamanioRelativo = tamanioRelativo;
     }
     
     //Metodos
+    
+    @Override
+    public void registrarAnimal(){
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Ingrese el nombre del mamifero:");
+        this.nombre = entrada.next();
+        
+        System.out.println("Ingrese la edad del mamifero");
+        this.edad = entrada.nextInt();
+        
+        System.out.println("Ingrese el peso del mamifero");
+        this.peso = entrada.nextDouble();
+        
+        System.out.println("¿Es peligroso? true (si) o false (no)");
+        this.esPeligroso = entrada.nextBoolean();
+        
+        System.out.println("¿Está hambriento? true (si) o false (no)");
+        this.hambriento = entrada.nextBoolean();
+        
+        System.out.println("¿tiene pelaje mamifero? true (si) o false (no)");
+        this.tienePelo = entrada.nextBoolean();
+        
+        System.out.println("¿Este mamifero es pequeño, mediano o grande?");
+        this.tamanioRelativo = entrada.next();
+    }
     
      @Override
     public void hacerSonido() {
@@ -58,11 +85,11 @@ public class Mamifero extends Animal implements Cuidable{
         this.tienePelo = tienePelo;
     }
 
-    public double getTamanioRelativo() {
+    public String getTamanioRelativo() {
         return tamanioRelativo;
     }
 
-    public void setTamanioRelativo(double tamanioRelativo) {
+    public void setTamanioRelativo(String tamanioRelativo) {
         this.tamanioRelativo = tamanioRelativo;
     }
 

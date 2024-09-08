@@ -1,6 +1,8 @@
 
 package logica;
 
+import java.util.Scanner;
+
 public class Ave extends Animal implements Cuidable{
     private String color;
     private String tamanioRelativoAve;
@@ -17,6 +19,31 @@ public class Ave extends Animal implements Cuidable{
     
     
     //Metodos
+    
+    @Override
+    public void registrarAnimal(){
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Ingrese el nombre del ave:");
+        this.nombre = entrada.next();
+        
+        System.out.println("Ingrese la edad del ave");
+        this.edad = entrada.nextInt();
+        
+        System.out.println("Ingrese el peso del ave");
+        this.peso = entrada.nextDouble();
+        
+        System.out.println("¿Es peligroso? true (si) o false (no)");
+        this.esPeligroso = entrada.nextBoolean();
+        
+        System.out.println("¿Está hambriento? true (si) o false (no)");
+        this.hambriento = entrada.nextBoolean();
+        
+        System.out.println("¿De que color es el plumaje del ave?");
+        this.color = entrada.next();
+        
+        System.out.println("¿Esta ave es pequeña, mediana o grande?");
+        this.tamanioRelativoAve = entrada.next();
+    }
     
         @Override
     public void hacerSonido() {

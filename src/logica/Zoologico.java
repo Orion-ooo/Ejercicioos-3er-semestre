@@ -28,16 +28,14 @@ public class Zoologico {
         Scanner entrada = new Scanner(System.in);
         System.out.println("Ingrese el nombre del animal:");
         String nombre = entrada.next();
-        
         animal.setNombre(nombre);
+        
+        System.out.println("Ingrese el");
         animales.add(animal);
     }
     
     public void agregarCuidador(Cuidador cuidador){
-        Scanner entrada = new Scanner(System.in);
-        System.out.println("Ingrese el nombre del cuidador:");
-        cuidador.setNombre(nombre) = new Scanner(System.in);
-        cuidadores.add(cuidador.setNombre(nombre));
+        
     }
     
     //Getters y Setters

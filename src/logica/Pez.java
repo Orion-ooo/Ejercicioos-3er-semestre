@@ -1,6 +1,8 @@
 
 package logica;
 
+import java.util.Scanner;
+
 public class Pez extends Animal implements Cuidable{
     private boolean esVenenoso;
     private String tamanioRelativoPez;
@@ -16,6 +18,34 @@ public class Pez extends Animal implements Cuidable{
     }
     
     //Metodos
+    @Override
+    public void registrarAnimal(){
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Ingrese el nombre del mamifero:");
+        this.nombre = entrada.next();
+        
+        System.out.println("Ingrese la edad del mamifero");
+        this.edad = entrada.nextInt();
+        
+        System.out.println("Ingrese el peso del mamifero");
+        this.peso = entrada.nextDouble();
+        
+        System.out.println("¿Es peligroso? true (si) o false (no)");
+        this.esPeligroso = entrada.nextBoolean();
+        
+        System.out.println("¿Está hambriento? true (si) o false (no)");
+        this.hambriento = entrada.nextBoolean();
+        
+        System.out.println("¿Este pez es venenoso? true (si) o false (no)");
+        this.esVenenoso = entrada.nextBoolean();
+        
+        System.out.println("¿Este mamifero es pequeño, mediano o grande?");
+        this.tamanioRelativoPez = entrada.next();
+        
+        System.out.println("¿Este pez emite sonido? true (si) o false (no)");
+        this.emiteSonido = entrada.nextBoolean();
+    }
+    
     @Override
     public void hacerSonido(){
         if(emiteSonido){

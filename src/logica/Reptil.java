@@ -1,14 +1,16 @@
 
 package logica;
 
+import java.util.Scanner;
+
 public class Reptil extends Animal implements Cuidable{
-    private double tamanioRelativoReptil;
+    private String tamanioRelativoReptil;
     private boolean esVenenoso;
     private boolean seArrastra;
     
     public Reptil(){}
     
-    public Reptil(double tamanioRelativoReptil, boolean esVenenoso, boolean seArrastra, String nombre, int edad, double peso, boolean esPeligroso, boolean hambriento){
+    public Reptil(String tamanioRelativoReptil, boolean esVenenoso, boolean seArrastra, String nombre, int edad, double peso, boolean esPeligroso, boolean hambriento){
         super(nombre,edad,peso, esPeligroso ,hambriento);
         this.tamanioRelativoReptil = tamanioRelativoReptil;
         this.esVenenoso = esVenenoso;
@@ -16,6 +18,33 @@ public class Reptil extends Animal implements Cuidable{
     }
     
     //Metodos
+    @Override
+    public void registrarAnimal(){
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Ingrese el nombre del mamifero:");
+        this.nombre = entrada.next();
+        
+        System.out.println("Ingrese la edad del mamifero");
+        this.edad = entrada.nextInt();
+        
+        System.out.println("Ingrese el peso del mamifero");
+        this.peso = entrada.nextDouble();
+        
+        System.out.println("¿Es peligroso? true (si) o false (no)");
+        this.esPeligroso = entrada.nextBoolean();
+        
+        System.out.println("¿Está hambriento? true (si) o false (no)");
+        this.hambriento = entrada.nextBoolean();
+        
+        System.out.println("¿Este reptil es venenoso? true (si) o false (no)");
+        this.esVenenoso = entrada.nextBoolean();
+        
+        System.out.println("¿Este reptil es pequeño, mediano o grande?");
+        this.tamanioRelativoReptil = entrada.next();
+        
+        System.out.println("¿Este reptil se arrastra? true (si) o false (no)");
+        this.seArrastra = entrada.nextBoolean();
+    }
     
     @Override
     public void hacerSonido(){
@@ -55,11 +84,11 @@ public class Reptil extends Animal implements Cuidable{
     
     //Getters y Setters
 
-    public double getTamanioRelativoReptil() {
+    public String getTamanioRelativoReptil() {
         return tamanioRelativoReptil;
     }
 
-    public void setTamanioRelativoReptil(double tamanioRelativoReptil) {
+    public void setTamanioRelativoReptil(String tamanioRelativoReptil) {
         this.tamanioRelativoReptil = tamanioRelativoReptil;
     }
 

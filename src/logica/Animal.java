@@ -24,6 +24,8 @@ public abstract class Animal {
     //Metodos
     
     public abstract void hacerSonido();
+    
+    public abstract void registrarAnimal();
 
     public void moverse() {
         System.out.println(nombre + " está moviéndose.");
