@@ -61,5 +61,10 @@ public class Cuidador {
     public void setJaulas(List<Jaula> jaulas) {
         this.jaulas = jaulas;
     }
+
+    @Override
+    public String toString() {
+        return "Cuidador{" + "nombre=" + nombre + ", edad=" + edad + ", experiencia=" + experiencia + ", jaulas=" + jaulas + '}';
+    }
     
 }

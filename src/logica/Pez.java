@@ -77,5 +77,10 @@ public class Pez extends Animal implements Cuidable{
     public void setEmiteSonido(boolean emiteSonido) {
         this.emiteSonido = emiteSonido;
     }
+
+    @Override
+    public String toString() {
+        return "Pez{" + "esVenenoso=" + esVenenoso + ", tamanioRelativoPez=" + tamanioRelativoPez + ", emiteSonido=" + emiteSonido + '}';
+    }
     
 }

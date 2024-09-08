@@ -65,6 +65,11 @@ public class Mamifero extends Animal implements Cuidable{
     public void setTamanioRelativo(double tamanioRelativo) {
         this.tamanioRelativo = tamanioRelativo;
     }
+
+    @Override
+    public String toString() {
+        return "Mamifero{" + "tienePelo=" + tienePelo + ", tamanioRelativo=" + tamanioRelativo + '}';
+    }
     
 }
 

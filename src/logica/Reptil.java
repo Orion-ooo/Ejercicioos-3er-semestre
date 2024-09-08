@@ -78,5 +78,10 @@ public class Reptil extends Animal implements Cuidable{
     public void setSeArrastra(boolean seArrastra) {
         this.seArrastra = seArrastra;
     }
+
+    @Override
+    public String toString() {
+        return "Reptil{" + "tamanioRelativoReptil=" + tamanioRelativoReptil + ", esVenenoso=" + esVenenoso + ", seArrastra=" + seArrastra + '}';
+    }
     
 }

@@ -72,4 +72,10 @@ public class Anfibio extends Animal implements Cuidable{
     public void setEsVenenoso(boolean esVenenoso){
         this.esVenenoso = esVenenoso;
     }
+
+    @Override
+    public String toString() {
+        return "Anfibio{" + "salta=" + salta + ", esVenenoso=" + esVenenoso + '}';
+    }
+    
 }

@@ -80,5 +80,10 @@ public class Ave extends Animal implements Cuidable{
     public void setPuedeVolar(boolean puedeVolar) {
         this.puedeVolar = puedeVolar;
     }
+
+    @Override
+    public String toString() {
+        return "Ave{" + "color=" + color + ", tamanioRelativoAve=" + tamanioRelativoAve + ", puedeVolar=" + puedeVolar + '}';
+    }
     
 }

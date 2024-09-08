@@ -82,4 +82,9 @@ public abstract class Animal {
     public void setHambriento(boolean hambriento){
         this.hambriento = hambriento;
     }
+
+    @Override
+    public String toString() {
+        return "Animal{" + "nombre=" + nombre + ", edad=" + edad + ", peso=" + peso + ", esPeligroso=" + esPeligroso + ", hambriento=" + hambriento + '}';
+    }
 }
