@@ -1,0 +1,66 @@
+@startuml
+abstract class Animal {
+    
+    # String nombre;
+    # int edad;
+    # double peso;
+    # boolean esPeligroso;
+    # boolean hambriento;
+}
+
+class Mamifero{
+    - boolean tienePelo;
+    - double tamanioRelativo;
+}
+
+class Ave{
+    - String color;
+    - String tamanioRelativoAve;
+    - boolean puedeVolar;
+}
+
+class Reptil{
+    - tamanioRelativoReptil;
+    - boolean esVenenoso;
+    - boolean seArrastra;
+}
+
+class Anfibio{
+    - boolean salta;
+    - boolean esVenenoso;
+}
+
+class Pez{
+    - boolean esVenenoso;
+    - String tamanioRelativoPez;
+    - boolean emiteSonido;
+}
+
+class Cuidador{
+    - String nombre;
+    - int edad;
+    - String experiencia;
+    - List <Jaula> jaulas;
+}
+
+class Jaula{
+    - String nombre;
+    - String estado;
+    - int capacidadMaxima;
+    - Cuidador cuidador;
+    - List<Animal> animales;
+}
+
+interface Cuidable{
+    void alimentar();
+    void jugar();
+}
+
+Mamifero --|> Animal : es un
+Ave --|> Animal : es un
+Reptil --|> Animal : es un
+Anfibio --|> Animal : es un
+Pez --|> Animal : es un
+Cuidador "1" -- "*" Jaula : tiene
+Jaula "1" -- "*" Animal : tiene
+@enduml
